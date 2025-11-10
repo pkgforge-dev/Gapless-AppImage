@@ -2,7 +2,6 @@
 
 set -eux
 
-ARCH="$(uname -m)"
 DEBLOATED_PKGS_INSTALLER="https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImages/refs/heads/main/useful-tools/get-debloated-pkgs.sh"
 PACKAGE_BUILDER="https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImages/refs/heads/main/useful-tools/make-aur-package.sh"
 
@@ -28,7 +27,6 @@ pacman -Syu --noconfirm \
 	gst-plugins-good \
 	gst-plugins-ugly \
 	pipewire-jack
-
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
