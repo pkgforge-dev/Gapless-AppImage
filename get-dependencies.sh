@@ -4,6 +4,7 @@ set -eux
 
 ARCH="$(uname -m)"
 DEBLOATED_PKGS_INSTALLER="https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImages/refs/heads/main/useful-tools/get-debloated-pkgs.sh"
+PACKAGE_BUILDER="https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImages/refs/heads/main/useful-tools/make-aur-package.sh"
 
 echo "Installing build dependencies for sharun & AppImage integration..."
 echo "---------------------------------------------------------------"
@@ -18,19 +19,16 @@ pacman -Syu --noconfirm \
 	zsync
 echo "Building the app & it's dependencies..."
 echo "---------------------------------------------------------------"
-sed -i 's|EUID == 0|EUID == 69|g' /usr/bin/makepkg
-git clone https://aur.archlinux.org/gapless.git/ ./gapless && (
-	cd ./gapless
-        makepkg -fs --noconfirm
-	ls -la .
-	pacman --noconfirm -U *.pkg.tar.*
-        pacman -Syu --noconfirm \
+wget --retry-connrefused --tries=30 "$PACKAGE_BUILDER" -O ./make-aur-package.sh
+chmod +x ./make-aur-package.sh
+./make-aur-package.sh gapless
+pacman -Syu --noconfirm \
 	gst-plugins-bad \
 	gst-plugins-base \
 	gst-plugins-good \
 	gst-plugins-ugly \
 	pipewire-jack
-)
+
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
