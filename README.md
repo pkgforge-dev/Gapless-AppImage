@@ -4,7 +4,7 @@
 [![CI Build Status](https://github.com//pkgforge-dev/Gapless-AppImage/actions/workflows/blank.yml/badge.svg)](https://github.com/pkgforge-dev/Gapless-AppImage/releases/latest)
 
 <p align="center">
-  <img src="https://gitlab.gnome.org/neithern/g4music/-/raw/master/data/icons/hicolor/scalable/apps/app.svg?ref_type=heads" />
+  <img src="https://gitlab.gnome.org/neithern/g4music/-/raw/master/data/icons/hicolor/scalable/apps/app.svg?ref_type=heads" width="128" />
 </p>
 
 * [Latest Stable Release](https://github.com/pkgforge-dev/Gapless-AppImage/releases/latest)
