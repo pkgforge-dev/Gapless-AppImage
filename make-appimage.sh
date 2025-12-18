@@ -13,7 +13,8 @@ export DESKTOP=/usr/share/applications/com.github.neithern.g4music.desktop
 export DEPLOY_OPENGL=1
 export DEPLOY_PIPEWIRE=1 # Pipewire audio backend is removed in later versions, but I'll let it stay here in case it gets added again
 export DEPLOY_GSTREAMER=1
-export STARTUPWMCLASS=g4music # For Wayland, this is 'com.github.neithern.g4music', so this needs to be changed in desktop file manually by the user in that case until some potential automatic fix exists for this
+export STARTUPWMCLASS=g4music
+export GTK_CLASS_FIX=1
 
 # Trace and deploy all files and directories needed for the application (including binaries, libraries and others)
 quick-sharun /usr/bin/g4music
