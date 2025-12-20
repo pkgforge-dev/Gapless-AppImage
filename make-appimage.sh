@@ -13,6 +13,7 @@ export DESKTOP=/usr/share/applications/com.github.neithern.g4music.desktop
 export DEPLOY_OPENGL=1
 export DEPLOY_PIPEWIRE=1 # Pipewire audio backend is removed in later versions, but I'll let it stay here in case it gets added again
 export DEPLOY_GSTREAMER=1
+export STARTUPWMCLASS=com.github.neithern.g4music # Set Wayland's StartupWMClass. For X11, GTK_CLASS_FIX will set it to use the Wayland one
 export GTK_CLASS_FIX=1
 
 # Trace and deploy all files and directories needed for the application (including binaries, libraries and others)
