@@ -10,7 +10,6 @@ export ADD_HOOKS="self-updater.bg.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=/usr/share/icons/hicolor/scalable/apps/com.github.neithern.g4music.svg
 export DESKTOP=/usr/share/applications/com.github.neithern.g4music.desktop
-export DEPLOY_OPENGL=1
 export DEPLOY_PIPEWIRE=1 # Pipewire audio backend is removed in later versions, but I'll let it stay here in case it gets added again
 export DEPLOY_GSTREAMER=1
 export STARTUPWMCLASS=com.github.neithern.g4music # Default to Wayland's wmclass. For X11, GTK_CLASS_FIX will force the wmclass to be the Wayland one.
