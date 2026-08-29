@@ -14,6 +14,7 @@ export DEPLOY_PIPEWIRE=1 # Pipewire audio backend is removed in later versions, 
 export DEPLOY_GSTREAMER=1
 export STARTUPWMCLASS=com.github.neithern.g4music # Default to Wayland's wmclass. For X11, GTK_CLASS_FIX will force the wmclass to be the Wayland one.
 export GTK_CLASS_FIX=1
+export USE_HOST_DRIVERS_EXPERIMENTAL=1
 
 # Trace and deploy all files and directories needed for the application (including binaries, libraries and others)
 quick-sharun /usr/bin/g4music
